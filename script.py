@@ -7,4 +7,5 @@ def hello_world():
 
 if __name__ == '__main__':
     from os import environ
-    app.run(debug=False, port=environ.get("PORT", 5000),host="localhost")
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, port=port,host='0.0.0.0')
